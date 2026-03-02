@@ -1,0 +1,8 @@
+# any artifacts
+*.img
+*.dd
+*.zst*
+*.tar
+
+#visual studio code
+.vscode*
