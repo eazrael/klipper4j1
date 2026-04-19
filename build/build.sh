@@ -7,8 +7,8 @@ LK2ND_REPO="https://github.com/eazrael/lk2nd.git"
 LK2ND_TAG="f4cb316c8e0c0c0b245399132a44866a63566062"
 LK2ND_PATCH="${SRC_DIR}/patches/lk2nd.patch"
 
-ARMBIAN_REPO="https://github.com/armbian/build.git"
-ARMBIAN_TAG="4db2f1abd27802f838b75aa9e4a2555a9da88e92"
+ARMBIAN_REPO="https://github.com/eazrael/armbian-build.git"
+ARMBIAN_TAG="snapmakerj1"
 ARMBIAN_PATCH="${SRC_DIR}/patches/armbian.patch"
 
 MAINSAILOS_REPO="https://github.com/mainsail-crew/MainsailOS.git"
