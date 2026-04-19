@@ -5,6 +5,7 @@ BUILD_DIR=$(readlink -f "$(pwd)")
 
 LK2ND_REPO="https://github.com/eazrael/lk2nd.git"
 LK2ND_TAG="f4cb316c8e0c0c0b245399132a44866a63566062"
+LK2ND_PATCH="${SRC_DIR}/patches/lk2nd.patch"
 
 ARMBIAN_REPO="https://github.com/armbian/build.git"
 ARMBIAN_TAG="4db2f1abd27802f838b75aa9e4a2555a9da88e92"
@@ -21,6 +22,11 @@ function build_lk2nd()
     git clone "${LK2ND_REPO}" lk2nd
     cd lk2nd
     git checkout "${LK2ND_TAG}"
+
+    if [ -f "${LK2ND_PATCH}" ] ; then 
+        git apply --whitespace=fix "${LK2ND_PATCH}"
+    fi 
+
     MAKEFLAGS=-j$(nproc) make BOOTLOADER_OUT=snapmakerj1 TOOLCHAIN_PREFIX=arm-none-eabi- lk2nd-msm8909
     MAKEFLAGS=-j$(nproc) make BOOTLOADER_OUT=snapmakerj1-fastboot TOOLCHAIN_PREFIX=arm-none-eabi- LK2ND_FORCE_FASTBOOT=1 LK2ND_FASTBOOT_DEBUG=2 DELAY=300000  lk2nd-msm8909 
     ln snapmakerj1/*/lk2nd.img "${BUILD_DIR}/lk2nd.img" || cp --reflink=auto snapmakerj1/*/lk2nd.img "${BUILD_DIR}/lk2nd.img"
@@ -35,7 +41,11 @@ function build_armbian()
     git clone "${ARMBIAN_REPO}" armbian
     cd armbian 
     git checkout "${ARMBIAN_TAG}" 
-    git apply --whitespace=fix "${ARMBIAN_PATCH}"
+    
+    if [ -f "${ARMBIAN_PATCH}" ] ; then 
+        git apply --whitespace=fix "${ARMBIAN_PATCH}"
+    fi 
+    
     time MAKEFLAGS=-j$(nproc) ./compile.sh BOARD=snapmaker-j1  KERNEL_CONFIGURE=no
     ln output/images/*.img "${BUILD_DIR}/armbian.img" ||  cp --reflink=auto output/images/*.img "${BUILD_DIR}/armbian.img"
 }
@@ -44,11 +54,15 @@ function build_mainsailos()
 {
     git clone "${MAINSAILOS_REPO}" mainsailos
     cd mainsailos 
+    
     if [ -n "${MAINSAILOS_PR}" ]; then 
          git fetch origin "pull/"${MAINSAILOS_PR}"/head:pr${MAINSAILOS_PR}"
     fi
     git checkout "${MAINSAILOS_TAG}" 
-    git apply --whitespace=fix "${MAINSAILOS_PATCH}"
+    
+    if [ -f "${MAINSAILOS_PATCH}" ]; then
+        git apply --whitespace=fix "${MAINSAILOS_PATCH}"
+    fi 
 
     ln "${BUILD_DIR}/armbian.img" ||  cp --reflink=auto "${BUILD_DIR}/armbian.img" .
 
