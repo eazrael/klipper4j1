@@ -11,11 +11,9 @@ ARMBIAN_REPO="https://github.com/eazrael/armbian-build.git"
 ARMBIAN_TAG="snapmakerj1"
 ARMBIAN_PATCH="${SRC_DIR}/patches/armbian.patch"
 
-MAINSAILOS_REPO="https://github.com/mainsail-crew/MainsailOS.git"
-MAINSAILOS_TAG="6e5bb4c3e9c5a8b022a3ecade586dab3070fdd6a"
+MAINSAILOS_REPO="https://github.com/eazrael/MainsailOS"
+MAINSAILOS_TAG="snapmakerj1"
 MAINSAILOS_PATCH="${SRC_DIR}/patches/mainsailos.patch"
-#workaround for pull requests
-MAINSAILOS_PR=351
 
 function build_lk2nd()
 {
@@ -55,11 +53,10 @@ function build_mainsailos()
     git clone "${MAINSAILOS_REPO}" mainsailos
     cd mainsailos 
     
-    if [ -n "${MAINSAILOS_PR}" ]; then 
-         git fetch origin "pull/"${MAINSAILOS_PR}"/head:pr${MAINSAILOS_PR}"
-    fi
-    git checkout "${MAINSAILOS_TAG}" 
-    
+    if [ -n "${MAINSAILOS_TAG}" ]; then 
+        git checkout "${MAINSAILOS_TAG}" 
+    fi    
+
     if [ -f "${MAINSAILOS_PATCH}" ]; then
         git apply --whitespace=fix "${MAINSAILOS_PATCH}"
     fi 
