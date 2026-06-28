@@ -2,7 +2,7 @@
 export LC_ALL=C
 set -e 
 
-KEEP_PARTITIONS="sbl1 sbl1bak aboot abootbak boot rpm rpmbak tzbak modemst1 modemst2 fsc ssd splash DDR fsg sec devinfo keystore oem config"
+KEEP_PARTITIONS="sbl1 sbl1bak aboot abootbak boot rpm rpmbak tzbak modem modemst1 modemst2 fsc ssd persist splash DDR fsg sec devinfo keystore oem config"
 
 
 if [ $# -ne 4 ]; then 
@@ -195,7 +195,7 @@ function inject_firmware()
     losetup -d "${loop_device}"
 }
 
-extract_firmware "${source_image}"
+#extract_firmware "${source_image}"
 
 
 #echo "$source_partition_header"
@@ -229,7 +229,7 @@ dd if="${lk2nd_image}" of="${target_image}" seek=$boot_start conv=notrunc status
 clone_from_armbian_image "${klipper_image}" "${target_image}" 1 linux_boot 512
 clone_from_armbian_image "${klipper_image}" "${target_image}" 2 linux_root 512
 
-inject_firmware "${target_image}"
+#inject_firmware "${target_image}"
 
 echo 
 echo 
