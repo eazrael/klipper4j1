@@ -1,0 +1,18 @@
+{
+    "filament_extruder_variant": [
+        "Direct Drive Standard"
+    ],
+    "filament_settings_id": [
+        "Generic PLA template2 @Snapmaker J1 0.4 nozzle"
+    ],
+    "from": "User",
+    "inherits": "Generic PLA template @Snapmaker J1 0.4 nozzle",
+    "name": "Generic PLA template2 @Snapmaker J1 0.4 nozzle",
+    "nozzle_temperature": [
+        "225"
+    ],
+    "nozzle_temperature_initial_layer": [
+        "225"
+    ],
+    "version": "1.7.0.2"
+}

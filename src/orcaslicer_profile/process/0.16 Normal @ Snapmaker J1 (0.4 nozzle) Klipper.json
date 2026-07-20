@@ -1,0 +1,15 @@
+{
+    "from": "User",
+    "initial_layer_print_height": "0.28",
+    "inherits": "0.20 Standard @ Snapmaker J1 (0.4 nozzle) Klipper",
+    "is_custom_defined": "0",
+    "layer_height": "0.16",
+    "name": "0.16 Normal @ Snapmaker J1 (0.4 nozzle) Klipper",
+    "print_settings_id": "0.16 Normal @ Snapmaker J1 (0.4 nozzle) Klipper",
+    "sparse_infill_density": "15%",
+    "sparse_infill_pattern": "grid",
+    "sparse_infill_speed": "188",
+    "top_shell_layers": "4",
+    "version": "1.7.0.2",
+    "wall_loops": "3"
+}

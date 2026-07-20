@@ -1,0 +1,19 @@
+{
+    "default_acceleration": "4000",
+    "from": "User",
+    "initial_layer_acceleration": "1000",
+    "initial_layer_print_height": "0.28",
+    "inherits": "0.20 Standard @ Snapmaker J1 (0.4 nozzle) Klipper",
+    "is_custom_defined": "0",
+    "layer_height": "0.24",
+    "name": "0.24 Draft @ Snapmaker J1 (0.4 nozzle) Klipper",
+    "outer_wall_speed": "210",
+    "print_settings_id": "0.24 Draft @ Snapmaker J1 (0.4 nozzle) Klipper",
+    "sparse_infill_density": "12%",
+    "sparse_infill_pattern": "line",
+    "sparse_infill_speed": "120",
+    "top_shell_layers": "3",
+    "top_surface_acceleration": "3000",
+    "travel_acceleration": "4000",
+    "version": "1.7.0.2"
+}
