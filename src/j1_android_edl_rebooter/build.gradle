@@ -1,0 +1,67 @@
+plugins {
+    id 'com.android.application' version '8.2.0'
+}
+
+android {
+    namespace 'com.test.sucheck'
+    compileSdk 34
+    defaultConfig {
+        applicationId "com.test.sucheck"
+        minSdk 21
+        targetSdk 25
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        debug {
+            debuggable true
+        }
+        release {
+            // AGP needs *some* signingConfig to avoid naming the output
+            // "-unsigned.apk". The actual signature gets replaced with the
+            // platform key by the signWithPlatformKey* task below.
+            signingConfig signingConfigs.debug
+        }
+    }
+}
+
+// Re-sign every assembled APK with the AOSP platform key (platform.pk8 /
+// platform.x509.pem at the project root, not checked into git). This is
+// required for android:sharedUserId="android.uid.system" to take effect.
+def platformKey = rootProject.file('platform.pk8')
+def platformCert = rootProject.file('platform.x509.pem')
+
+def findApksigner = {
+    def home = System.getenv('ANDROID_HOME') ?: System.getenv('ANDROID_SDK_ROOT')
+    if (home) {
+        def buildTools = new File(home, 'build-tools')
+        def versions = buildTools.exists() ? buildTools.listFiles().findAll { it.isDirectory() } : []
+        if (!versions.isEmpty()) {
+            def newest = versions.sort { it.name }.last()
+            def candidate = new File(newest, 'apksigner')
+            if (candidate.exists()) return candidate.absolutePath
+        }
+    }
+    return 'apksigner' // fall back to PATH
+}
+
+android.applicationVariants.all { variant ->
+    def signTaskName = "signWithPlatformKey${variant.name.capitalize()}"
+    def signTask = tasks.register(signTaskName, Exec) {
+        group = 'signing'
+        description = "Re-signs the ${variant.name} APK with the AOSP platform key"
+        onlyIf {
+            if (!platformKey.exists() || !platformCert.exists()) {
+                logger.warn("Skipping ${signTaskName}: platform.pk8/platform.x509.pem not found in project root")
+                return false
+            }
+            return true
+        }
+        doFirst {
+            def apk = variant.outputs.first().outputFile
+            commandLine findApksigner(), 'sign', '--key', platformKey.absolutePath,
+                '--cert', platformCert.absolutePath, apk.absolutePath
+        }
+    }
+    variant.assembleProvider.configure { it.finalizedBy(signTask) }
+}

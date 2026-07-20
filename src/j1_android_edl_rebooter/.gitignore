@@ -1,0 +1,22 @@
+# Build outputs
+build/
+.gradle/
+
+# Local configuration
+local.properties
+*.local.properties
+
+# IDE
+.idea/
+*.iml
+
+# Signing keys
+*.pk8
+*.pem
+*.p12
+*.jks
+
+# OS
+.DS_Store
+Thumbs.db
+.vscode/settings.json
