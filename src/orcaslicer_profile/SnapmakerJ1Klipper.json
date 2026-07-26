@@ -1,0 +1,126 @@
+{
+    "name": "Snapmaker J1 Klipper",
+    "version": "02.04.00.06",
+    "force_update": "0",
+    "description": "Snapmaker J1 (IDEX) klipperized profiles",
+    "machine_model_list": [
+        {
+            "name": "Snapmaker J1 Klipper",
+            "sub_path": "machine/Snapmaker J1 Klipper.json"
+        },
+        {
+            "name": "Snapmaker J1 Klipper (Copy Mode)",
+            "sub_path": "machine/Snapmaker J1 Klipper (Copy Mode).json"
+        },
+        {
+            "name": "Snapmaker J1 Klipper (Mirror Mode)",
+            "sub_path": "machine/Snapmaker J1 Klipper (Mirror Mode).json"
+        }
+    ],
+    "machine_list": [
+        {
+            "name": "Snapmaker J1 0.4 Nozzle Klipper (Copy Mode)",
+            "sub_path": "machine/Snapmaker J1 0.4 Nozzle Klipper (Copy Mode).json"
+        },
+        {
+            "name": "Snapmaker J1 0.4 Nozzle Klipper (Mirror Mode)",
+            "sub_path": "machine/Snapmaker J1 0.4 Nozzle Klipper (Mirror Mode).json"
+        },
+        {
+            "name": "Snapmaker J1 0.4 Nozzle Klipper IDEX",
+            "sub_path": "machine/Snapmaker J1 0.4 Nozzle Klipper IDEX.json"
+        }
+    ],
+    "process_list": [
+        {
+            "name": "fdm_process_j1_klipper_common",
+            "sub_path": "process/fdm_process_j1_klipper_common.json"
+        },
+        {
+            "name": "0.08 Extra Fine @ Snapmaker J1 (0.4 nozzle) Klipper",
+            "sub_path": "process/0.08 Extra Fine @ Snapmaker J1 (0.4 nozzle) Klipper.json"
+        },
+        {
+            "name": "0.12 Fine @ Snapmaker J1 (0.4 nozzle) Klipper",
+            "sub_path": "process/0.12 Fine @ Snapmaker J1 (0.4 nozzle) Klipper.json"
+        },
+        {
+            "name": "0.16 Normal @ Snapmaker J1 (0.4 nozzle) Klipper",
+            "sub_path": "process/0.16 Normal @ Snapmaker J1 (0.4 nozzle) Klipper.json"
+        },
+        {
+            "name": "0.20 Fast @ Snapmaker J1 (0.4 nozzle) Klipper",
+            "sub_path": "process/0.20 Fast @ Snapmaker J1 (0.4 nozzle) Klipper.json"
+        },
+        {
+            "name": "0.20 Standard @ Snapmaker J1 (0.4 nozzle) Klipper",
+            "sub_path": "process/0.20 Standard @ Snapmaker J1 (0.4 nozzle) Klipper.json"
+        },
+        {
+            "name": "0.20 Strength @ Snapmaker J1 (0.4 nozzle) Klipper",
+            "sub_path": "process/0.20 Strength @ Snapmaker J1 (0.4 nozzle) Klipper.json"
+        },
+        {
+            "name": "0.24 Draft @ Snapmaker J1 (0.4 nozzle) Klipper",
+            "sub_path": "process/0.24 Draft @ Snapmaker J1 (0.4 nozzle) Klipper.json"
+        },
+        {
+            "name": "0.25 Benchy @ Snapmaker J1 (0.4 nozzle) Klipper",
+            "sub_path": "process/0.25 Benchy @ Snapmaker J1 (0.4 nozzle) Klipper.json"
+        },
+        {
+            "name": "0.28 Extra Draft @ Snapmaker J1 (0.4 nozzle) Klipper",
+            "sub_path": "process/0.28 Extra Draft @ Snapmaker J1 (0.4 nozzle) Klipper.json"
+        }
+    ],
+    "filament_list": [
+        {
+            "name": "Generic ABS template @Snapmaker J1 0.4 nozzle",
+            "sub_path": "filament/Generic ABS template @Snapmaker J1 0.4 nozzle.json"
+        },
+        {
+            "name": "Generic ASA template @Snapmaker J1 0.4 nozzle",
+            "sub_path": "filament/Generic ASA template @Snapmaker J1 0.4 nozzle.json"
+        },
+        {
+            "name": "Generic HIPS template @Snapmaker J1 0.4 nozzle",
+            "sub_path": "filament/Generic HIPS template @Snapmaker J1 0.4 nozzle.json"
+        },
+        {
+            "name": "Generic PA template @Snapmaker J1 0.4 nozzle",
+            "sub_path": "filament/Generic PA template @Snapmaker J1 0.4 nozzle.json"
+        },
+        {
+            "name": "Generic PET template @Snapmaker J1 0.4 nozzle",
+            "sub_path": "filament/Generic PET template @Snapmaker J1 0.4 nozzle.json"
+        },
+        {
+            "name": "Generic PLA template @Snapmaker J1 0.4 nozzle",
+            "sub_path": "filament/Generic PLA template @Snapmaker J1 0.4 nozzle.json"
+        },
+        {
+            "name": "Generic PLA template2 @Snapmaker J1 0.4 nozzle",
+            "sub_path": "filament/Generic PLA template2 @Snapmaker J1 0.4 nozzle.json"
+        },
+        {
+            "name": "Generic PPA template @Snapmaker J1 0.4 nozzle",
+            "sub_path": "filament/Generic PPA template @Snapmaker J1 0.4 nozzle.json"
+        },
+        {
+            "name": "Generic PPS template @Snapmaker J1 0.4 nozzle",
+            "sub_path": "filament/Generic PPS template @Snapmaker J1 0.4 nozzle.json"
+        },
+        {
+            "name": "Generic PVA template @Snapmaker J1 0.4 nozzle",
+            "sub_path": "filament/Generic PVA template @Snapmaker J1 0.4 nozzle.json"
+        },
+        {
+            "name": "Generic TPU template @Snapmaker J1 0.4 nozzle",
+            "sub_path": "filament/Generic TPU template @Snapmaker J1 0.4 nozzle.json"
+        },
+        {
+            "name": "Snapmaker J1 - 0.4mm - Jayo PLA+",
+            "sub_path": "filament/Snapmaker J1 - 0.4mm - Jayo PLA+.json"
+        }
+    ]
+}

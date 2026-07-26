@@ -1,0 +1,15 @@
+{
+    "type": "process",
+    "name": "0.20 Strength @ Snapmaker J1 (0.4 nozzle) Klipper",
+    "from": "system",
+    "instantiation": "true",
+    "inherits": "fdm_process_j1_klipper_common",
+    "bottom_shell_layers": "4",
+    "sparse_infill_density": "25%",
+    "wall_loops": "6",
+    "compatible_printers": [
+        "Snapmaker J1 0.4 Nozzle Klipper (Copy Mode)",
+        "Snapmaker J1 0.4 Nozzle Klipper (Mirror Mode)",
+        "Snapmaker J1 0.4 Nozzle Klipper IDEX"
+    ]
+}

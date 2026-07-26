@@ -1,23 +1,22 @@
 {
+    "type": "filament",
+    "name": "Snapmaker J1 - 0.4mm - Jayo PLA+",
+    "from": "system",
+    "instantiation": "true",
+    "inherits": "Generic PLA @System",
+    "filament_id": "Psmj1jayo",
     "enable_pressure_advance": [
         "1"
     ],
     "filament_max_volumetric_speed": [
         "25"
     ],
-    "filament_settings_id": [
-        "Snapmaker J1 - 0.4mm - Jayo PLA+"
-    ],
-    "from": "User",
     "hot_plate_temp": [
         "60"
     ],
     "hot_plate_temp_initial_layer": [
         "60"
     ],
-    "inherits": "Generic PLA @System",
-    "is_custom_defined": "0",
-    "name": "Snapmaker J1 - 0.4mm - Jayo PLA+",
     "nozzle_temperature": [
         "225"
     ],
@@ -30,5 +29,9 @@
     "slow_down_layer_time": [
         "0"
     ],
-    "version": "2.3.0.3"
+    "compatible_printers": [
+        "Snapmaker J1 0.4 Nozzle Klipper (Copy Mode)",
+        "Snapmaker J1 0.4 Nozzle Klipper (Mirror Mode)",
+        "Snapmaker J1 0.4 Nozzle Klipper IDEX"
+    ]
 }

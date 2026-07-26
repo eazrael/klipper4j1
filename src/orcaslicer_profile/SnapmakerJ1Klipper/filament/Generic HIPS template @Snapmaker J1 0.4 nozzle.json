@@ -1,6 +1,10 @@
 {
+    "type": "filament",
+    "name": "Generic HIPS template @Snapmaker J1 0.4 nozzle",
+    "from": "system",
+    "instantiation": "true",
     "activate_air_filtration": [
-        "1"
+        "0"
     ],
     "activate_chamber_temp_control": [
         "0"
@@ -26,10 +30,6 @@
     "close_fan_the_first_x_layers": [
         "3"
     ],
-    "compatible_printers": [
-        "Snapmaker J1 (0.4 nozzle)"
-    ],
-    "compatible_printers_condition": "",
     "compatible_prints": [],
     "compatible_prints_condition": "",
     "complete_print_exhaust_fan_speed": [
@@ -63,13 +63,13 @@
         "90"
     ],
     "fan_cooling_layer_time": [
-        "30"
+        "10"
     ],
     "fan_max_speed": [
-        "80"
+        "60"
     ],
     "fan_min_speed": [
-        "10"
+        "0"
     ],
     "filament_cooling_final_speed": [
         "3.4"
@@ -81,10 +81,10 @@
         "4"
     ],
     "filament_cost": [
-        "20"
+        "22.99"
     ],
     "filament_density": [
-        "1.04"
+        "1.06"
     ],
     "filament_deretraction_speed": [
         "nil"
@@ -98,7 +98,7 @@
     "filament_flow_ratio": [
         "1"
     ],
-    "filament_id": "P5c9bfff",
+    "filament_id": "P7fae02d",
     "filament_is_support": [
         "0"
     ],
@@ -112,7 +112,7 @@
         "nil"
     ],
     "filament_max_volumetric_speed": [
-        "28.6"
+        "8"
     ],
     "filament_minimal_purge_on_wipe_tower": [
         "15"
@@ -162,9 +162,6 @@
     "filament_retraction_speed": [
         "nil"
     ],
-    "filament_settings_id": [
-        "Generic ABS template @Snapmaker J1 0.4 nozzle"
-    ],
     "filament_shrink": [
         "100%"
     ],
@@ -187,7 +184,7 @@
         "0"
     ],
     "filament_type": [
-        "ABS"
+        "HIPS"
     ],
     "filament_unloading_speed": [
         "90"
@@ -210,7 +207,6 @@
     "filament_z_hop_types": [
         "nil"
     ],
-    "from": "User",
     "full_fan_speed_layer": [
         "0"
     ],
@@ -223,23 +219,20 @@
     "idle_temperature": [
         "0"
     ],
-    "inherits": "",
     "internal_bridge_fan_speed": [
         "-1"
     ],
-    "is_custom_defined": "0",
-    "name": "Generic ABS template @Snapmaker J1 0.4 nozzle",
     "nozzle_temperature": [
-        "270"
+        "240"
     ],
     "nozzle_temperature_initial_layer": [
-        "260"
+        "240"
     ],
     "nozzle_temperature_range_high": [
-        "280"
+        "270"
     ],
     "nozzle_temperature_range_low": [
-        "240"
+        "220"
     ],
     "overhang_fan_speed": [
         "80"
@@ -254,7 +247,7 @@
         "0.02"
     ],
     "reduce_fan_stop_start_freq": [
-        "1"
+        "0"
     ],
     "required_nozzle_HRC": [
         "3"
@@ -263,7 +256,7 @@
         "1"
     ],
     "slow_down_layer_time": [
-        "3"
+        "6"
     ],
     "slow_down_min_speed": [
         "20"
@@ -292,5 +285,9 @@
     "textured_plate_temp_initial_layer": [
         "90"
     ],
-    "version": "1.7.0.2"
+    "compatible_printers": [
+        "Snapmaker J1 0.4 Nozzle Klipper (Copy Mode)",
+        "Snapmaker J1 0.4 Nozzle Klipper (Mirror Mode)",
+        "Snapmaker J1 0.4 Nozzle Klipper IDEX"
+    ]
 }

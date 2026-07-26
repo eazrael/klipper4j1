@@ -1,20 +1,25 @@
 {
+    "type": "machine",
+    "name": "Snapmaker J1 0.4 Nozzle Klipper (Mirror Mode)",
+    "from": "system",
+    "instantiation": "true",
+    "printer_model": "Snapmaker J1 Klipper (Mirror Mode)",
     "adaptive_bed_mesh_margin": "0",
     "auxiliary_fan": "1",
     "bbl_use_printhost": "0",
     "bed_custom_model": "",
     "bed_custom_texture": "",
     "bed_exclude_area": [
-        "173x0",
+        "163x0",
         "337x0",
         "337x200",
-        "173x200"
+        "163x200"
     ],
     "bed_mesh_max": "99999,99999",
     "bed_mesh_min": "-99999,-99999",
     "bed_mesh_probe_distance": "50,50",
     "before_layer_change_gcode": ";BEFORE_LAYER_CHANGE\n;[layer_z]\nG92 E0\n",
-    "best_object_pos": "0.25,0.5",
+    "best_object_pos": "0.24,0.5",
     "change_extrusion_role_gcode": "",
     "change_filament_gcode": "",
     "cooling_tube_length": "5",
@@ -25,7 +30,6 @@
     ],
     "default_print_profile": "0.20 Standard @ Snapmaker J1 (0.4 nozzle) Klipper",
     "deretraction_speed": [
-        "8",
         "8"
     ],
     "disable_m73": "0",
@@ -37,26 +41,20 @@
     "extruder_clearance_height_to_rod": "36",
     "extruder_clearance_radius": "65",
     "extruder_colour": [
-        "#FCE94F",
         "#FCE94F"
     ],
     "extruder_offset": [
-        "0x0",
         "0x0"
     ],
     "fan_kickstart": "0",
     "fan_speedup_overhangs": "1",
     "fan_speedup_time": "0",
-    "from": "User",
     "gcode_flavor": "klipper",
     "head_wrap_detect_zone": [],
     "high_current_on_filament_swap": "0",
     "host_type": "octoprint",
-    "inherits": "Snapmaker J1 (0.4 nozzle)",
-    "is_custom_defined": "0",
     "layer_change_gcode": ";AFTER_LAYER_CHANGE\n;[layer_z]\nG92 E0\nSET_PRINT_STATS_INFO CURRENT_LAYER={layer_num + 1}",
     "long_retractions_when_cut": [
-        "0",
         "0"
     ],
     "machine_end_gcode": "END_PRINT",
@@ -66,12 +64,12 @@
         "5000"
     ],
     "machine_max_acceleration_extruding": [
-        "8000",
+        "3000",
         "3000"
     ],
     "machine_max_acceleration_retracting": [
-        "4000",
-        "5000"
+        "3000",
+        "3000"
     ],
     "machine_max_acceleration_travel": [
         "3000",
@@ -79,11 +77,11 @@
     ],
     "machine_max_acceleration_x": [
         "3000",
-        "3000"
+        "20000"
     ],
     "machine_max_acceleration_y": [
         "3000",
-        "3000"
+        "20000"
     ],
     "machine_max_acceleration_z": [
         "200",
@@ -134,23 +132,19 @@
         "0"
     ],
     "machine_pause_gcode": "PAUSE",
-    "machine_start_gcode": "START_PRINT BED_TEMP={first_layer_bed_temperature[0]} T0_TEMP={nozzle_temperature_initial_layer[0]} T1_TEMP={nozzle_temperature_initial_layer[0]} START_EXTRUDER=0 T0_USED=1 T1_USED=1 IDEX_MODE=COPY",
+    "machine_start_gcode": "START_PRINT BED_TEMP={first_layer_bed_temperature[0]} T0_TEMP={nozzle_temperature_initial_layer[0]} T1_TEMP={nozzle_temperature_initial_layer[0]} START_EXTRUDER=0 T0_USED=1 T1_USED=1 IDEX_MODE=MIRROR",
     "machine_tool_change_time": "5",
     "machine_unload_filament_time": "0",
     "manual_filament_change": "0",
     "max_layer_height": [
-        "0.3",
         "0.3"
     ],
     "max_resonance_avoidance_speed": "120",
     "min_layer_height": [
-        "0.05",
         "0.05"
     ],
     "min_resonance_avoidance_speed": "70",
-    "name": "Snapmaker J1 0.4 Nozzle Klipper (Copy Mode)",
     "nozzle_diameter": [
-        "0.4",
         "0.4"
     ],
     "nozzle_height": "2.5",
@@ -158,6 +152,7 @@
     "nozzle_type": "stainless_steel",
     "nozzle_volume": "0",
     "parking_pos_retraction": "92",
+    "pause_gcode": "M600 ;pause print",
     "pellet_modded_printer": "0",
     "preferred_orientation": "0",
     "printable_area": [
@@ -167,9 +162,7 @@
         "13x200"
     ],
     "printable_height": "200",
-    "printer_model": "Snapmaker J1",
-    "printer_notes": "",
-    "printer_settings_id": "Snapmaker J1 0.4 Nozzle Klipper (Copy Mode)",
+    "printer_notes": "IDEX Mirror Mode. OrcaSlicer has no awareness of this mode: it slices for a SINGLE extruder and the printer firmware duplicates the toolpath to the second hotend. Only one filament is configured here, and its temperature is applied to BOTH hotends (T0_TEMP/T1_TEMP in the start G-code). Therefore load filament with identical properties (same type, temperature, flow) in both extruders. If they differ, OrcaSlicer cannot account for it and it is up to you to make it work. For independent dual-extruder printing use the IDEX printer profile instead.",
     "printer_structure": "undefine",
     "printer_technology": "FFF",
     "printer_variant": "0.4",
@@ -177,53 +170,42 @@
     "printhost_ssl_ignore_revoke": "0",
     "printing_by_object_gcode": "",
     "purge_in_prime_tower": "0",
+    "remaining_times": "1",
     "resonance_avoidance": "0",
     "retract_before_wipe": [
-        "70%",
         "70%"
     ],
     "retract_length_toolchange": [
-        "2",
         "2"
     ],
     "retract_lift_above": [
-        "0",
         "0"
     ],
     "retract_lift_below": [
-        "0",
         "0"
     ],
     "retract_lift_enforce": [
-        "All Surfaces",
         "All Surfaces"
     ],
     "retract_restart_extra": [
-        "0",
         "0"
     ],
     "retract_restart_extra_toolchange": [
-        "0",
         "0"
     ],
     "retract_when_changing_layer": [
-        "1",
         "1"
     ],
     "retraction_distances_when_cut": [
-        "18",
         "18"
     ],
     "retraction_length": [
-        "0.8",
         "0.8"
     ],
     "retraction_minimum_travel": [
-        "1",
         "1"
     ],
     "retraction_speed": [
-        "45",
         "45"
     ],
     "scan_first_layer": "0",
@@ -238,27 +220,21 @@
     "time_cost": "0",
     "time_lapse_gcode": "",
     "travel_slope": [
-        "3",
         "3"
     ],
     "upward_compatible_machine": [],
     "use_firmware_retraction": "0",
     "use_relative_e_distances": "1",
-    "version": "2.3.0.3",
     "wipe": [
-        "1",
         "1"
     ],
     "wipe_distance": [
-        "1",
         "1"
     ],
     "z_hop": [
-        "0.4",
         "0.4"
     ],
     "z_hop_types": [
-        "Auto Lift",
         "Auto Lift"
     ],
     "z_offset": "0"

@@ -1,0 +1,22 @@
+{
+    "type": "filament",
+    "name": "Generic PLA template2 @Snapmaker J1 0.4 nozzle",
+    "from": "system",
+    "instantiation": "true",
+    "inherits": "Generic PLA template @Snapmaker J1 0.4 nozzle",
+    "filament_id": "Psmj1pla2",
+    "filament_extruder_variant": [
+        "Direct Drive Standard"
+    ],
+    "nozzle_temperature": [
+        "225"
+    ],
+    "nozzle_temperature_initial_layer": [
+        "225"
+    ],
+    "compatible_printers": [
+        "Snapmaker J1 0.4 Nozzle Klipper (Copy Mode)",
+        "Snapmaker J1 0.4 Nozzle Klipper (Mirror Mode)",
+        "Snapmaker J1 0.4 Nozzle Klipper IDEX"
+    ]
+}

@@ -1,6 +1,10 @@
 {
+    "type": "filament",
+    "name": "Generic PA template @Snapmaker J1 0.4 nozzle",
+    "from": "system",
+    "instantiation": "true",
     "activate_air_filtration": [
-        "0"
+        "1"
     ],
     "activate_chamber_temp_control": [
         "0"
@@ -26,10 +30,6 @@
     "close_fan_the_first_x_layers": [
         "3"
     ],
-    "compatible_printers": [
-        "Snapmaker J1 (0.4 nozzle)"
-    ],
-    "compatible_printers_condition": "",
     "compatible_prints": [],
     "compatible_prints_condition": "",
     "complete_print_exhaust_fan_speed": [
@@ -57,13 +57,13 @@
         "0"
     ],
     "eng_plate_temp": [
-        "90"
+        "100"
     ],
     "eng_plate_temp_initial_layer": [
-        "90"
+        "100"
     ],
     "fan_cooling_layer_time": [
-        "10"
+        "4"
     ],
     "fan_max_speed": [
         "60"
@@ -81,10 +81,10 @@
         "4"
     ],
     "filament_cost": [
-        "22.99"
+        "20"
     ],
     "filament_density": [
-        "1.06"
+        "1.04"
     ],
     "filament_deretraction_speed": [
         "nil"
@@ -98,7 +98,7 @@
     "filament_flow_ratio": [
         "1"
     ],
-    "filament_id": "P7fae02d",
+    "filament_id": "P5260554",
     "filament_is_support": [
         "0"
     ],
@@ -162,9 +162,6 @@
     "filament_retraction_speed": [
         "nil"
     ],
-    "filament_settings_id": [
-        "Generic HIPS template @Snapmaker J1 0.4 nozzle"
-    ],
     "filament_shrink": [
         "100%"
     ],
@@ -187,7 +184,7 @@
         "0"
     ],
     "filament_type": [
-        "HIPS"
+        "PA"
     ],
     "filament_unloading_speed": [
         "90"
@@ -210,42 +207,38 @@
     "filament_z_hop_types": [
         "nil"
     ],
-    "from": "User",
     "full_fan_speed_layer": [
         "0"
     ],
     "hot_plate_temp": [
-        "90"
+        "100"
     ],
     "hot_plate_temp_initial_layer": [
-        "90"
+        "100"
     ],
     "idle_temperature": [
         "0"
     ],
-    "inherits": "",
     "internal_bridge_fan_speed": [
         "-1"
     ],
-    "is_custom_defined": "0",
-    "name": "Generic HIPS template @Snapmaker J1 0.4 nozzle",
     "nozzle_temperature": [
-        "240"
+        "290"
     ],
     "nozzle_temperature_initial_layer": [
-        "240"
+        "290"
     ],
     "nozzle_temperature_range_high": [
-        "270"
+        "300"
     ],
     "nozzle_temperature_range_low": [
-        "220"
+        "260"
     ],
     "overhang_fan_speed": [
-        "80"
+        "30"
     ],
     "overhang_fan_threshold": [
-        "25%"
+        "95%"
     ],
     "pellet_flow_coefficient": [
         "0.4157"
@@ -257,13 +250,13 @@
         "0"
     ],
     "required_nozzle_HRC": [
-        "3"
+        "40"
     ],
     "slow_down_for_layer_cooling": [
         "1"
     ],
     "slow_down_layer_time": [
-        "6"
+        "2"
     ],
     "slow_down_min_speed": [
         "20"
@@ -278,7 +271,7 @@
         "-1"
     ],
     "temperature_vitrification": [
-        "100"
+        "108"
     ],
     "textured_cool_plate_temp": [
         "40"
@@ -287,10 +280,14 @@
         "40"
     ],
     "textured_plate_temp": [
-        "90"
+        "100"
     ],
     "textured_plate_temp_initial_layer": [
-        "90"
+        "100"
     ],
-    "version": "1.7.0.2"
+    "compatible_printers": [
+        "Snapmaker J1 0.4 Nozzle Klipper (Copy Mode)",
+        "Snapmaker J1 0.4 Nozzle Klipper (Mirror Mode)",
+        "Snapmaker J1 0.4 Nozzle Klipper IDEX"
+    ]
 }

@@ -1,4 +1,8 @@
 {
+    "type": "filament",
+    "name": "Generic PPA template @Snapmaker J1 0.4 nozzle",
+    "from": "system",
+    "instantiation": "true",
     "activate_air_filtration": [
         "1"
     ],
@@ -26,10 +30,6 @@
     "close_fan_the_first_x_layers": [
         "3"
     ],
-    "compatible_printers": [
-        "Snapmaker J1 (0.4 nozzle)"
-    ],
-    "compatible_printers_condition": "",
     "compatible_prints": [],
     "compatible_prints_condition": "",
     "complete_print_exhaust_fan_speed": [
@@ -57,16 +57,16 @@
         "0"
     ],
     "eng_plate_temp": [
-        "90"
+        "100"
     ],
     "eng_plate_temp_initial_layer": [
-        "90"
+        "100"
     ],
     "fan_cooling_layer_time": [
-        "35"
+        "5"
     ],
     "fan_max_speed": [
-        "80"
+        "30"
     ],
     "fan_min_speed": [
         "10"
@@ -84,7 +84,7 @@
         "20"
     ],
     "filament_density": [
-        "1.04"
+        "1.17"
     ],
     "filament_deretraction_speed": [
         "nil"
@@ -96,9 +96,9 @@
         "; filament end gcode \nM106 P3 S0\n"
     ],
     "filament_flow_ratio": [
-        "1"
+        "0.96"
     ],
-    "filament_id": "Pac30b4b",
+    "filament_id": "Pb6a507f",
     "filament_is_support": [
         "0"
     ],
@@ -112,7 +112,7 @@
         "nil"
     ],
     "filament_max_volumetric_speed": [
-        "28.6"
+        "8"
     ],
     "filament_minimal_purge_on_wipe_tower": [
         "15"
@@ -162,9 +162,6 @@
     "filament_retraction_speed": [
         "nil"
     ],
-    "filament_settings_id": [
-        "Generic ASA template @Snapmaker J1 0.4 nozzle"
-    ],
     "filament_shrink": [
         "100%"
     ],
@@ -187,7 +184,7 @@
         "0"
     ],
     "filament_type": [
-        "ASA"
+        "PPA-CF"
     ],
     "filament_unloading_speed": [
         "90"
@@ -210,42 +207,38 @@
     "filament_z_hop_types": [
         "nil"
     ],
-    "from": "User",
     "full_fan_speed_layer": [
         "0"
     ],
     "hot_plate_temp": [
-        "90"
+        "100"
     ],
     "hot_plate_temp_initial_layer": [
-        "90"
+        "100"
     ],
     "idle_temperature": [
         "0"
     ],
-    "inherits": "",
     "internal_bridge_fan_speed": [
         "-1"
     ],
-    "is_custom_defined": "0",
-    "name": "Generic ASA template @Snapmaker J1 0.4 nozzle",
     "nozzle_temperature": [
-        "260"
+        "290"
     ],
     "nozzle_temperature_initial_layer": [
-        "260"
+        "290"
     ],
     "nozzle_temperature_range_high": [
-        "280"
+        "320"
     ],
     "nozzle_temperature_range_low": [
-        "240"
+        "280"
     ],
     "overhang_fan_speed": [
-        "80"
+        "40"
     ],
     "overhang_fan_threshold": [
-        "25%"
+        "0%"
     ],
     "pellet_flow_coefficient": [
         "0.4157"
@@ -254,16 +247,16 @@
         "0.02"
     ],
     "reduce_fan_stop_start_freq": [
-        "1"
+        "0"
     ],
     "required_nozzle_HRC": [
-        "3"
+        "40"
     ],
     "slow_down_for_layer_cooling": [
         "1"
     ],
     "slow_down_layer_time": [
-        "3"
+        "2"
     ],
     "slow_down_min_speed": [
         "20"
@@ -278,7 +271,7 @@
         "-1"
     ],
     "temperature_vitrification": [
-        "100"
+        "210"
     ],
     "textured_cool_plate_temp": [
         "40"
@@ -287,10 +280,14 @@
         "40"
     ],
     "textured_plate_temp": [
-        "90"
+        "100"
     ],
     "textured_plate_temp_initial_layer": [
-        "90"
+        "100"
     ],
-    "version": "1.7.0.2"
+    "compatible_printers": [
+        "Snapmaker J1 0.4 Nozzle Klipper (Copy Mode)",
+        "Snapmaker J1 0.4 Nozzle Klipper (Mirror Mode)",
+        "Snapmaker J1 0.4 Nozzle Klipper IDEX"
+    ]
 }
